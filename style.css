@@ -258,6 +258,75 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
 #info p.box.white span {
   font-weight: 600;
 }
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#home .slide {
+  overflow: hidden;
+  padding: 2rem 0;
+  background: var(--gradient-white-invert);
+  display: flex;
+  white-space: nowrap;
+
+  position: relative;
+}
+
+#home .slide:before,
+#home .slide:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 25rem;
+  height: 100%;
+  z-index: 2;
+}
+
+#home .slide:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #f0f0f0);
+}
+
+#home .slide:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #f0f0f0);
+}
+
+#home .slide:hover .slide-text {
+  animation-play-state: paused;
+}
+
+#home .slide-text {
+  animation: slide 20s infinite linear;
+  display: flex;
+}
+
+#home .slide-text p {
+  font-size: 1.2rem;
+  margin: 0 2rem;
+  color: var(--color-text-black);
+  opacity: .7;
+  position: relative;
+  font-weight: 700;
+}
+
+#home .slide-text p:after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--color-text-black);
+  top: 40%;
+  right: -2.1rem;
+}
 /* section function =================== */
 #function {
   background: var(--gradient-white);
@@ -723,14 +792,14 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
   }
 
   header#home {
-    height: 100vh;
+    height: 95vh;
   }
 
   header#home .wrapper .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10rem;
-    height: 100vh;
+    height: 95vh;
   }
 
   header#home .wrapper .content .text {
