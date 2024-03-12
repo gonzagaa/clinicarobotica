@@ -62,12 +62,12 @@ body {
 /*HEADER HOME =================== */
 #home {
   background: radial-gradient(circle, #E6EAED 0%, #EDEFF1 50%, #E6EAED 100%);
-  height: 110dvh;
+  height: 100vh;
 }
 
 #home .content {
     width: 100%;
-    height: 110dvh;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -116,6 +116,7 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
 }
 
 #home .content .text a button {
+  font-size: var(--f16);
   color: var(--color-text-white);
   background: var(--gradient-blue);
   padding: 1rem 2rem;
@@ -159,38 +160,23 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
 }
 
 #home .content .image img.antesdepois.um {
-  top: -1rem;
+  top: 1rem;
   left: 0;
 
   animation-delay: 100ms;
 }
 
 #home .content .image img.antesdepois.dois {
-  top: -3rem;
+  bottom: 0;
   right: 0;
 
   animation-delay: 300ms;
 }
 
-#home .content .image img.antesdepois.tres {
-  bottom: 20%;
-  left: 0;
-
-  animation-delay: 500ms;
-}
-
-#home .content .image img.antesdepois.quatro {
-  bottom: 30%;
-  right: 0;
-
-  animation-delay: 700ms;
-}
-
+#home .content .image img.antesdepois.tres,
+#home .content .image img.antesdepois.quatro,
 #home .content .image img.antesdepois.cinco {
-  bottom: -4rem;
-  left: 35%;
-
-  animation-delay: 300ms;
+  display: none;
 }
 
 @keyframes moveAntesDepois {
@@ -313,7 +299,7 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  min-width: 70%;
+  min-width: 40%;
   min-height: 12.8rem;
 
   position: relative;
@@ -597,6 +583,7 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
 }
 /* faq =================== */
 #faq {
+  overflow: hidden;
   background: var(--gradient-white-invert);
 }
 
@@ -767,6 +754,41 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
 
   header#home .content .text p {
     font-size: var(--f20);
+  }
+
+  header#home .content .image img.antesdepois.um {
+    top: -1rem;
+    left: 0;  
+  }
+  
+  header#home .content .image img.antesdepois.dois {
+    top: -3rem;
+    right: 0;
+  }
+  
+
+  header#home .content .image img.antesdepois.tres {
+    display: inherit;
+    bottom: 20%;
+    left: 0;
+    
+    animation-delay: 500ms;
+  }
+  
+  header#home .content .image img.antesdepois.quatro {
+    display: inherit;
+    bottom: 30%;
+    right: 0;
+  
+    animation-delay: 700ms;
+  }
+  
+  header#home .content .image img.antesdepois.cinco {
+    display: inherit;
+    bottom: -4rem;
+    left: 35%;
+  
+    animation-delay: 300ms;
   }
 
   section#info .wrapper {
