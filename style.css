@@ -762,11 +762,10 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
   }
   
   header#home .content .image img.antesdepois.dois {
-    top: -3rem;
+    top: -5rem;
     right: 0;
   }
   
-
   header#home .content .image img.antesdepois.tres {
     display: inherit;
     bottom: 20%;
@@ -785,7 +784,7 @@ background: linear-gradient(to right, #003B64 0%, #004A7E 100%);
   
   header#home .content .image img.antesdepois.cinco {
     display: inherit;
-    bottom: -4rem;
+    bottom: -5rem;
     left: 35%;
   
     animation-delay: 300ms;
